@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "pjkubo-c34e"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "pjkubo-c34e"
+    spec:
+      containers:
+        - name: "pjkubo-c34e"
+          image: "kuboreg.azurecr.io/pjkubo"
+          ports:
+          - containerPort: 80
