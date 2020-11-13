@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "pjtestkuber-780f"
+    labels:
+        app: "pjtestkuber-780f"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: pjtestkubergithub-pjtestkuber-780f.9ffa6eb8d1874454814f.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "pjtestkuber-780f"
+                servicePort: 80
