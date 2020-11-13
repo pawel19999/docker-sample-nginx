@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "pjtestkuber-780f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "pjtestkuber-780f"
+  template:
+    metadata:
+      labels:
+        app: "pjtestkuber-780f"
+    spec:
+      containers:
+        - name: "pjtestkuber-780f"
+          image: "kubercr.azurecr.io/pjtestkuber"
+          ports:
+          - containerPort: 80
